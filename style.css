@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,700&family=Roboto+Condensed&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+@-webkit-keyframes Back {
+    0%{background-position:0% 76%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 76%}
+}
+@-moz-keyframes Back {
+    0%{background-position:0% 76%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 76%}
+}
+@keyframes Back {
+    0%{background-position:0% 76%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 76%}
+}
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent url(./img/v748-toon-107.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    position: absolute;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 50px;
+    margin-top: auto;
+}
+.mainCont {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+.weeks {
+    margin:65px 2px 10px 2px;
+    padding: 6px;
+    font-size: 25px;
+    border-radius: 10px;
+    width: 20%;
+    box-shadow: 5px 5px 5px;
+    background: linear-gradient(325deg, #10316b, #0b409c, #ffe867);
+    background-size: 600% 600%;
+
+    -webkit-animation: Back 4s ease infinite;
+    -moz-animation: Back 4s ease infinite;
+    animation: Back 4s ease infinite;
+}
+a{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+footer {
+    clear: both;
+    position: absolute;
+    display: flex;
+    min-height: 20vh;
+    min-width: 60vh;
+    top: 80%;
+    justify-content: space-evenly;
+}
+footer a {
+    color: transparent;
+    text-decoration: none;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+footer a.GH {
+    min-width: 10vh;
+    min-height: 8vh;
+    background-size: 100%;
+    background-image: url(./img/github.png);
+}
+  
+footer a.Jsupport {
+    min-width: 10vh;
+    min-height: 8vh;
+    background-size: 100%;
+    background-image: url(./img/js.png);
+}
+footer a.WC {
+    min-width: 10vh;
+    min-height: 8vh;
+    background-size: 90%;
+    background-image: url(./img/pngegg.png);
+}

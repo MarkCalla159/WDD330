@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="codigo.png" type="image/x-icon">
+    <title>Week02</title>
+</head>
+<body>
+    <section>
+        <h2>Requirement 01</h2>
+        <input type="text" id="req1">
+        <button id="req1But" onclick="req1()">Submit</button>
+        <div id="req1Otpt"></div>
+    </section>
+
+    <section>
+        <h2>Requirement 02</h2>
+        <input type="number" id="req2">
+        <button id="req2But" onclick="req2()">Sum</button>
+        <div id="req2otpt"></div>
+    </section>
+
+    <section>
+        <h2>Requirement 03</h2>
+        <input type="number" step="1" id="req3.1" />
+        <input type="number" step="1" id="req3.2" />
+        <button id="button03" onclick="req3('add')">+</button>
+        <button id="button03" onclick="req3('multiply')">*</button>
+        <button id="button03" onclick="req3('divide')">/</button>
+        <div id="req3otpt"></div>
+    </section>
+
+</body>
+<script>
+    function req1(){
+        const input = document.getElementById("req1").value;
+        const output = document.getElementById("req1Otpt");
+
+        output.innerHTML = "You enter: " + input;
+    }
+    function req2() {
+        const input = document.getElementById('req2').value;
+        const outputElement = document.getElementById('req2otpt');
+        // make sure input is a number...we can convert it from the string we get from the input value to a number with parseInt.  If this fails it's not a number
+        const result = sum(input);
+        outputElement.innerHTML = result;
+
+    }
+    function sum(input) {
+        let total = 0;
+        for (let i = 1; i <= input; i++) {
+            total += i;
+        }
+        return total;
+    }
+
+    function req3(operations){
+        const inputOne = document.getElementById("req3.1").value;
+        const inputTwo = document.getElementById("req3.2").value;
+        const output = document.getElementById("req3otpt");
+
+        let results;
+        switch (operations) {
+            case('add'):
+            results = addition(inputOne, inputTwo);
+            break;
+            case('multiply'):
+            results = multiply(inputOne, inputTwo);
+            break;
+            case('divide'):
+            results = divide(inputOne, inputTwo);
+            break;
+        }
+        output.innerHTML = results;
+    }
+
+    function addition(inputOne, inputTwo) {
+        const result = parseInt(inputOne) + parseInt(inputTwo);
+        return result;
+    }
+
+    function multiply(inputOne, inputTwo) {
+        const result = parseInt(inputOne) * parseInt(inputTwo);
+        return result;
+    }
+
+    function divide(inputOne, inputTwo) {
+        const result = parseInt(inputOne) / parseInt(inputTwo);
+        return result;
+    }
+</script>
+
+</html>
